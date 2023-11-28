@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Trainee(props) {
 
     return (
@@ -8,6 +10,13 @@ function Trainee(props) {
         <p>Location: {props.location}</p>
         </div>
     );
+}
+
+
+Trainee.propTypes = {
+    name: PropTypes.string,
+    age: PropTypes.number,
+    location: PropTypes.string,
 }
 
 export default Trainee;
