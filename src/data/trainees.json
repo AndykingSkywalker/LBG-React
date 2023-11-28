@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Andrew",
+        "age": 27,
+        "location": "Bradford"
+    },
+
+    {
+        "name": "Ember",
+        "age": 5,
+        "location": "Cat Bed"
+    },
+
+    {
+        "name": "Exodia the forbidden one",
+        "age": "Unknown but he looks ancient",
+        "location": "Egypt/Yugi's Deck"
+    }
+]   
