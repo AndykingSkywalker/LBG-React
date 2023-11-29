@@ -1,32 +1,38 @@
-import PropTypes from 'prop-types';
-import kings from '../kings.json';
+import King from "./King";
+import kings from "../kings.json";
+import { useState } from "react";
 
-function KingsSolution(props) {
-    const kingsArray = [];
+function KingSolution() {
+  const [filter, setFilter] = useState("");
+
+  const kingComponents = [];
 
   for (const king of kings) {
-    kingsArray.push(
-        <div>
-        <p>Name: {king.nm}</p>
-        <p>City: {king.cty}</p>
-        <p>House: {king.hse}</p>
-        <p>Years: {king.yrs}</p>
-        </div>
-    );
+    if (
+      filter.length === 0 ||
+      king.nm.toLowerCase().startsWith(filter.toLowerCase()) ||
+      king.nm.toLowerCase().includes(filter.toLowerCase())
+    )
+      kingComponents.push(
+        <King
+          key={king.nm + " " + king.yrs}
+          country={king.cty}
+          house={king.hse}
+          name={king.nm}
+          years={king.yrs}
+        />
+      );
   }
-
-    return ( 
-        <div>
-            {kingsArray}
-        </div>
-     );
+  function handleChange(event) {
+    setFilter(event.target.value);
+  }
+  return (
+    <div>
+      <h2> Kings </h2>
+      <input type="text" value={filter} onChange={handleChange} />
+      {kingComponents}
+    </div>
+  );
 }
 
-KingsSolution.propTypes = {
-    name: PropTypes.string,
-    city: PropTypes.string,
-    house: PropTypes.string,
-    years: PropTypes.string
-}
-
-export default KingsSolution;
+export default KingSolution;

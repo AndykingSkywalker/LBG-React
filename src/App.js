@@ -2,9 +2,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import Trainee from "./components/Trainee";
 import trainees from "./data/trainees.json";
-import KingsSolution from "./components/KingsSolution";
 import ButtonTest from "./components/ButtonTest";
 import Counter from "./components/Counter";
+import King from "./components/King";
+import KingSolution from "./components/KingsSolution";
 function App() {
 
   // const traineesArray = [];
@@ -27,6 +28,7 @@ function App() {
     <div>
       <ButtonTest />
       <Counter/>
+      <KingSolution />
     </div>
   );
 }
