@@ -29,7 +29,7 @@ function KingSolution() {
   return (
     <div>
       <h2> Kings </h2>
-      <input type="text" value={filter} onChange={handleChange} />
+      <input type="text" placeholder="Enter filter here" value={filter} onChange={handleChange} />
       {kingComponents}
     </div>
   );
