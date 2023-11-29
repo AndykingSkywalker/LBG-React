@@ -23,13 +23,10 @@ function KingSolution() {
         />
       );
   }
-  function handleChange(event) {
-    setFilter(event.target.value);
-  }
   return (
     <div>
       <h2> Kings </h2>
-      <input type="text" placeholder="Enter filter here" value={filter} onChange={handleChange} />
+      <input type="text" placeholder="Enter filter here" value={filter} onChange={e => setFilter(e.target.value)} />
       {kingComponents}
     </div>
   );
