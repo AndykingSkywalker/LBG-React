@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Trainee from "./components/Trainee";
 import trainees from "./data/trainees.json";
@@ -26,9 +25,7 @@ function App() {
 
   return (
     <div>
-      <ButtonTest />
-      <Counter/>
-      <KingSolution />
+     <KingSolution /> 
     </div>
   );
 }
