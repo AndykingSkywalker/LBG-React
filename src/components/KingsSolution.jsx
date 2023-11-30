@@ -1,6 +1,6 @@
 import King from "./King";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function KingSolution() {
   const [kings, setkings] = useState([]);
@@ -18,6 +18,10 @@ function KingSolution() {
         console.log(error);
       });
   }
+
+  useEffect(() => {
+    getKings()
+  }, [])
 
   const kingsData = [];
 
@@ -39,7 +43,6 @@ function KingSolution() {
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       />
-      <button onClick={getKings}>Click here for a king</button>
       {kingsData}
       <br />
     </div>

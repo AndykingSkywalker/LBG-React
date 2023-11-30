@@ -5,6 +5,9 @@ import ButtonTest from "./components/ButtonTest";
 import Counter from "./components/Counter";
 import King from "./components/King";
 import KingSolution from "./components/KingsSolution";
+import PokemonFunction from "./components/Pokemon";
+import PostRequest from "./components/GetMessages";
+
 function App() {
 
   // const traineesArray = [];
@@ -25,7 +28,9 @@ function App() {
 
   return (
     <div>
-     <KingSolution /> 
+     {/* <KingSolution />  */}
+     {/* <PokemonFunction /> */}
+     <PostRequest />
     </div>
   );
 }
