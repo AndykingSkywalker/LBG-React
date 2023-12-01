@@ -9,23 +9,7 @@ import PokemonFunction from "./components/Pokemon";
 import PostRequest from "./components/GetMessages";
 
 function App() {
-
-  // const traineesArray = [];
-
-  // for (const trainee of trainees) {
-  //   console.log("Trainee:", trainee);
-  //   traineesArray.push(
-  //     <Trainee
-  //       key={trainee.name + " " + trainee.age}
-  //       name={trainee.name}
-  //       age={trainee.age}
-  //       location={trainee.location}
-  //     />
-  //   );
-  // }
-
   
-
   return (
     <div>
      {/* <KingSolution />  */}
